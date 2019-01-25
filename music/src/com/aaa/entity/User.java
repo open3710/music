@@ -16,6 +16,14 @@ public class User implements Serializable{
 	private String user_rgister_time;
 	private Integer user_del_state;
 	private String user_phone;
+	private Integer user_type;
+	
+	public Integer getUser_type() {
+		return user_type;
+	}
+	public void setUser_type(Integer user_type) {
+		this.user_type = user_type;
+	}
 	public Integer getUser_id() {
 		return user_id;
 	}
@@ -74,9 +82,18 @@ public class User implements Serializable{
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	@Override
+	public String toString() {
+		return "User [user_id=" + user_id + ", user_name=" + user_name
+				+ ", user_idcard=" + user_idcard + ", user_city=" + user_city
+				+ ", user_email=" + user_email + ", user_pwd=" + user_pwd
+				+ ", user_rgister_time=" + user_rgister_time
+				+ ", user_del_state=" + user_del_state + ", user_phone="
+				+ user_phone + ", user_type=" + user_type + "]";
+	}
 	public User(String user_name, String user_idcard, String user_city,
 			String user_email, String user_pwd, String user_rgister_time,
-			Integer user_del_state, String user_phone) {
+			Integer user_del_state, String user_phone, Integer user_type) {
 		super();
 		this.user_name = user_name;
 		this.user_idcard = user_idcard;
@@ -86,16 +103,9 @@ public class User implements Serializable{
 		this.user_rgister_time = user_rgister_time;
 		this.user_del_state = user_del_state;
 		this.user_phone = user_phone;
+		this.user_type = user_type;
 	}
-	@Override
-	public String toString() {
-		return "User [user_id=" + user_id + ", user_name=" + user_name
-				+ ", user_idcard=" + user_idcard + ", user_city=" + user_city
-				+ ", user_email=" + user_email + ", user_pwd=" + user_pwd
-				+ ", user_rgister_time=" + user_rgister_time
-				+ ", user_del_state=" + user_del_state + ", user_phone="
-				+ user_phone + "]";
-	}
+	
 	
 	
 }

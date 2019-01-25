@@ -12,5 +12,6 @@ public class Test {
 		UserService us = new UserService();
 		List<User> list = us.findAllUser();
 		System.out.println(list);
+		System.out.println("test");
 	}
 }
