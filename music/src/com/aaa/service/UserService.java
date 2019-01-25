@@ -21,4 +21,9 @@ public class UserService {
 		List<User> list = ud.findAllUser();
 		return list;
 	}
+	
+	public List<User> loginUser(User user){
+		List<User> list = ud.loginUser(user);
+		return list;
+	}
 }
