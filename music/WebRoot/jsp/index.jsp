@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -23,10 +24,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 </head>
-
+<body>
 
 <div id="fixed-panel" class="panel-home">
-
+	
 
 	<div class="panel-item message-box">
 		<a target="_blank" href="http://music.taihe.com/user/message"></a>
@@ -113,18 +114,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</h1>
 				<div class="search-wrap clearfix">
 					<form id="search_form" name="f1"
-						action="http://music.taihe.com/search">
+						action="music/findByTypeMusic">
 						<div class="search">
-							<span class="s_ipt_wr"> <span
-								class="ui-placeholder-container"><label for="ww"
-									class="ui-placeholder-label" style="display: block;">请输入歌名、歌词、歌手或专辑</label><input
-									type="text" name="key" value="" data-value=""
-									data-default="请输入歌名、歌词、歌手或专辑" id="ww"
+							<span class="s_ipt_wr">
+							<span
+								class="ui-placeholder-container">
+									
+								<input
+									type="text" name="name" value="" data-value=""
+									placeholder="请输入"
 									class="kw s_ipt s_ipt_def" size="42" maxlength="100"
 									autocomplete="off"></span>
-							</span><span class="s_btn_wr"><input type="submit" value=""
+							</span><span class="s_btn_wr"><input type="submit" 
 								class="s_btn"
-								
 								></span><span
 								class="s_tools"></span>
 						</div>
@@ -754,713 +756,37 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								class="control-right" href="http://music.taihe.com/#"
 								style="display: none;"><i></i><em></em></a>
 							<div class="mui-slider-scroll-wrap">
+							
 								<div class="mui-slider-scroll-container">
 									<ul class="clearfix">
-										<li>
-											<div class="pic">
-												<a
-													href="http://music.taihe.com/songlist/565468058?pst=shoufa"
-													target="_blank"> <img
-													src="img/bos_client_1548243266f7c38765a8b3681ce7e086942f28190d.jpg@s_1,w_300,h_300"
-													alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;565468058&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-menu"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a
-													href="http://music.taihe.com/songlist/565468058?pst=shoufa"
-													target="_blank">新歌抢鲜听</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/songlist/565468058"
-													title="千千音乐1月速递" class="to" target="_blank"> 千千音乐1月速递 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612135962?pst=shoufa"
-													target="_blank"> <img
-													src="img/bos_client_1548212670cc2525a897f1bcfd0c5646c786efbc2e.jpg@s_1,w_300,h_300"
-													alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612135962&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612135962?pst=shoufa"
-													target="_blank">半壶纱</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/110946001"
-													title="刘珂矣" class="to" target="_blank"> 刘珂矣 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612135457?pst=shoufa"
-													target="_blank"> <img
-													src="./千千音乐-听见世界_files/bos_client_1548242353fbbdcc57e32e47c11878868864502461.jpg@s_1,w_300,h_300"
-													alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612135457&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612135457?pst=shoufa"
-													target="_blank">君がいるなら</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/232752118"
-													title="スカート" class="to" target="_blank"> スカート </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612133476?pst=shoufa"
-													target="_blank"> <img
-													src="./千千音乐-听见世界_files/bos_client_1548235373301abc8f7647cd1d01fb9c727ecac1d3.jpg@s_1,w_300,h_300"
-													alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612133476&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612133476?pst=shoufa"
-													target="_blank">小岛</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/340500597"
-													title="Tiger谭秋娟" class="to" target="_blank"> Tiger谭秋娟 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612134397?pst=shoufa"
-													target="_blank"> <img
-													src="./千千音乐-听见世界_files/bos_client_15482349903dd0c03b56a3f63ecab6c5b318b0e725.jpg@s_1,w_300,h_300"
-													alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612134397&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612134397?pst=shoufa"
-													target="_blank">How We Ended</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/340497896"
-													title="Last Goodbye" class="to" target="_blank"> Last
-													Goodbye </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612118403?pst=shoufa"
-													target="_blank"> <img
-													src="./千千音乐-听见世界_files/bos_client_1548212670cc2525a897f1bcfd0c5646c786efbc2e.jpg@s_1,w_300,h_300"
-													alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612118403&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612118403?pst=shoufa"
-													target="_blank">Sometimes</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/340503307"
-													title="Afar陈侣帆" class="to" target="_blank"> Afar陈侣帆 </a>
-											</div>
-										</li>
+										<c:forEach items="${musciType[3] }" var="entity">
+											<li>
+												<div class="pic">
+													<a
+														href="music/findByIdMusic?id=${entity.musicId }"
+														target="_blank"> <img
+														src="img/${entity.musicPic }">
+													</a> <span>
+														<a href="javascript:;"
+														class="play icon-play-white js-play-menu"></a>
+													</span>
+	
+												</div>
+												<div class="music to">
+													<a href="music/findByIdMusic?id=${entity.musicId }"
+														target="_blank">${entity.musicName }</a>
+												</div>
+												<div class="artist">
+													<a href="javascript:void(0)"
+														title="千千音乐1月速递" class="to" target="_blank"> ${entity.musicTitle } </a>
+												</div>
+											</li>
+										</c:forEach>
 									</ul>
-									<ul class="clearfix">
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612120501?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_1548210218a052a33163bcb0241254a5a16ea1f955.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612120501&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612120501?pst=shoufa"
-													target="_blank">哪吒闹</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/1325" title="大张伟"
-													class="to" target="_blank"> 大张伟 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612118878?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_1548173138c7be088ac18342c7823d7d8dd096a9f4.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612118878&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612118878?pst=shoufa"
-													target="_blank">Tightrope</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/340438084"
-													title="福山潤" class="to" target="_blank"> 福山潤 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612118346?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_15481646039144ea8b6cd4adaeeea5b843f965f3fc.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612118346&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612118346?pst=shoufa"
-													target="_blank">四海</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/210120835" title="陈粒"
-													class="to" target="_blank"> 陈粒 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/611902324?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_154807043127a68ea8afe40d94ce3831372245b8e8.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;611902324&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/611902324?pst=shoufa"
-													target="_blank">最初的自己</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/87965754"
-													title="战斧乐队" class="to" target="_blank"> 战斧乐队 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612092355?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_1548049319fc814d716ff24a01b5ddd7209e82a3c0.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612092355&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612092355?pst=shoufa"
-													target="_blank">珍惜</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/177498" title="云朵"
-													class="to" target="_blank"> 云朵 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612063056?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_154803788188c077be807551c41093f9d607cfe46c.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612063056&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612063056?pst=shoufa"
-													target="_blank">フリーズドライplease</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/340446572"
-													title="ましのみ" class="to" target="_blank"> ましのみ </a>
-											</div>
-										</li>
-									</ul>
-									<ul class="clearfix">
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612063482?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_15479949895eeeedd7b70772ffca0acc9f1161b151.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612063482&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612063482?pst=shoufa"
-													target="_blank">疯狂的外星人（电影《疯狂的外星人》主题曲）</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/67631"
-													title="黄渤,梁龙,沈腾" class="to" target="_blank"> 黄渤,梁龙,沈腾 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612047472?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_154772554725e7d5b63809f5405b7fd3ddc2d7cd61.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612047472&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612047472?pst=shoufa"
-													target="_blank">福气拱拱来</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/340444011"
-													title="段奥娟 ,孟美岐 ,吴宣仪 ,赖美云" class="to" target="_blank">
-													段奥娟 ,孟美岐 ,吴宣仪 ,赖美云 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612064771?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_154781121189a88e64e2d6f7c3e5c24493a66a312a.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612064771&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612064771?pst=shoufa"
-													target="_blank">在下霍元甲</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/240102777"
-													title="GAI" class="to" target="_blank"> GAI </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612041145?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_1547725729776d6ae9d08892bb346e5f7b9f643289.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612041145&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612041145?pst=shoufa"
-													target="_blank">一半人生</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/1271" title="阿信"
-													class="to" target="_blank"> 阿信 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612040160?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_15478017342a0ae7649545d08735af2ac12f7291c2.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612040160&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612040160?pst=shoufa"
-													target="_blank">要快乐</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/1376" title="龙梅子"
-													class="to" target="_blank"> 龙梅子 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612056707?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_15478049066aa27c59ce4b6c9ffad5593718d7a45f.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612056707&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612056707?pst=shoufa"
-													target="_blank">Don't Leave Me Alone</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/232708506"
-													title="KEITA" class="to" target="_blank"> KEITA </a>
-											</div>
-										</li>
-									</ul>
-									<ul class="clearfix">
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612040340?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_15477256530987dfa9e2573f7ea144cc5e06de30e6.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612040340&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612040340?pst=shoufa"
-													target="_blank">迷路</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/1468" title="王蓉"
-													class="to" target="_blank"> 王蓉 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612031828?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_15476475794877ea5755806714fad3e4b7f06c2661.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612031828&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612031828?pst=shoufa"
-													target="_blank">Running Late</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/340497896"
-													title="Last Goodbye" class="to" target="_blank"> Last
-													Goodbye </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612029475?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_15476474464e4e92ca2bfa3662a87d9c85a792c371.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612029475&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612029475?pst=shoufa"
-													target="_blank">可乐</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/87965620" title="赵紫骅"
-													class="to" target="_blank"> 赵紫骅 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612029487?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_154764725539f8b21815e6512a1a7fe570af5eed63.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612029487&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612029487?pst=shoufa"
-													target="_blank">NEW STORIES</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/340437997"
-													title="井上陽介" class="to" target="_blank"> 井上陽介 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/611902357?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_1547535333787fcbe992dc257a901b41ff62c750b3.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;611902357&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/611902357?pst=shoufa"
-													target="_blank">渡风</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/110946001"
-													title="刘珂矣" class="to" target="_blank"> 刘珂矣 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612011540?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_1547535192371935f3084cc4df0b51eca9e75ee587.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612011540&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612011540?pst=shoufa"
-													target="_blank">Sunny Spot</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/87974816"
-													title="石原夏織" class="to" target="_blank"> 石原夏織 </a>
-											</div>
-										</li>
-									</ul>
-									<ul class="clearfix">
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/612017548?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_15475302040c352faa44d8c355fb92820f99438715.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;612017548&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/612017548?pst=shoufa"
-													target="_blank">旋木</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/8459" title="朱孝天"
-													class="to" target="_blank"> 朱孝天 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/611958568?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_15474645712efbfedef5980a9e52cf4195be6a94e7.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;611958568&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/611958568?pst=shoufa"
-													target="_blank">音乐合Ⅸ</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/2374" title="群星"
-													class="to" target="_blank"> 群星 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/611954474?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_154746458172262d590ebec4e38225e8538a37f79b.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;611954474&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/611954474?pst=shoufa"
-													target="_blank">兄弟醉一场</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/340207123"
-													title="于利先生" class="to" target="_blank"> 于利先生 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/611960410?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_1547464592f8492b5db01df3574d1238554239d8e1.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;611960410&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/611960410?pst=shoufa"
-													target="_blank">瓦村</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/340479799"
-													title="李带菓 Slim Rothaus" class="to" target="_blank">
-													李带菓 Slim Rothaus </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/611952921?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_1547395192150fbdce8a1e1e674e9e003958e0d056.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;611952921&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/611952921?pst=shoufa"
-													target="_blank">小猪猪</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/1447" title="周艳泓"
-													class="to" target="_blank"> 周艳泓 </a>
-											</div>
-										</li>
-										<li>
-											<div class="pic">
-												<a href="http://music.taihe.com/album/611859359?pst=shoufa"
-													target="_blank"> <img
-													data-src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_1547135952b9f8015ba223450c59a5ced00a13b384.jpg@s_1,w_300,h_300"
-													src="./千千音乐-听见世界_files/default_pic.png" alt=""
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;release&quot;,&quot;sub&quot;:&quot;img&quot;}">
-												</a> <span
-													data-args="{&quot;id&quot;:&quot;611859359&quot;,&quot;moduleName&quot;:&quot;newAlbum_tuijian&quot;}">
-													<a href="javascript:;"
-													class="play icon-play-white js-play-album"></a>
-												</span>
-
-											</div>
-											<div class="music to">
-												<a href="http://music.taihe.com/album/611859359?pst=shoufa"
-													target="_blank">某人</a>
-											</div>
-											<div class="artist">
-												<a href="http://music.taihe.com/artist/340503616"
-													title="周佑恒" class="to" target="_blank"> 周佑恒 </a>
-											</div>
-										</li>
-									</ul>
+									
+									
+									
+									
 								</div>
 							</div>
 						</div>
@@ -1529,12 +855,7 @@ var indexPage = '1';
 </script>
 					
 				</div>
-				<div class="ranklist-wrapper clearfix">
-
-
-
-
-
+				<div class="ranklist-wrapper clearfix" >
 					<div class="mod mod-song-rank js-mod mod-newsong"
 						monkey="NI_billboard_new"
 						data-js-mod-name="new_index_billboard_new">
@@ -1542,300 +863,38 @@ var indexPage = '1';
 							<h2 class="title">新歌榜</h2>
 							<span
 								data-args="{&quot;id&quot;:[&quot;611238837&quot;,&quot;611801466&quot;,&quot;612047474&quot;,&quot;610722309&quot;,&quot;591310911&quot;,&quot;611859361&quot;,&quot;611944036&quot;,&quot;601422013&quot;,&quot;611717057&quot;,&quot;612041147&quot;,&quot;611954477&quot;,&quot;611902376&quot;,&quot;568320992&quot;,&quot;611744658&quot;,&quot;591579114&quot;,&quot;612017551&quot;,&quot;611636195&quot;,&quot;611952924&quot;,&quot;612040163&quot;,&quot;612064774&quot;],&quot;moduleName&quot;:&quot;new&quot;}"><a
-								href="javascript:;" class="icon-play-all play-all js-play-song"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;play_all&quot;}"></a></span>
+								href="javascript:;" class="icon-play-all play-all js-play-song" ></a></span>
 						</div>
 						<div class="bd">
 							<ul class="song-list">
-
-								<li class=" top1"><div class="index">01</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/611238837" title="生僻字"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">生僻字</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="陈柯宇"> <a
-														hidefocus="true"
-														href="http://music.taihe.com/artist/209822512">陈柯宇</a>
-												</span>
-												</span>
+								<c:forEach items="${musciType[0] }" var="entity" varStatus="go">
+									
+									<li class=" top1"><div class="index">${go.count}</div>
+										<div class="status status-steady">
+											<i class="icon-status"></i>
+										</div>
+										<div class="song-info">
+											<div class="info">
+												<div class="song">
+													<a href="music/findByIdMusic?id=${entity.musicId }" title="${entity.musicName }">${entity.musicName }</a>
+													<span class="artist">
+														<span class="author_list" title="${entity.user_id }"> 
+														<a hidefocus="true" href="javascript:;">${entity.user_id }</a>
+													</span>
+													</span>
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;611238837&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;newIcon&quot;,&quot;albumId&quot;:&quot;611238835&quot;,&quot;resourceTypeExt&quot;:&quot;2&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/2d5ab3120f08727becfc2803ee5402f7\/611740447\/611740447.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u751f\u50fb\u5b57&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top2"><div class="index">02</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/611801466" title="我挺好的"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">我挺好的</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="郭峰"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1550">郭峰</a>
-												</span>
-												</span>
-											</div>
+										<div class="opera-icon">
+											<a href="javascript:;"class="opera-icon-play icon icon-music-play js-play-song" ></a>
+											<a href="javascript:;" class="opera-icon-add icon icon-music-collect js-add"></a>
 										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;611801466&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;newIcon&quot;,&quot;albumId&quot;:&quot;611801464&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/ef8cc8d0f9934214edbbd8425f27963f\/611801491\/611801491.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u6211\u633a\u597d\u7684&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top3"><div class="index">03</div>
-									<div class="status status-up">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/612047474"
-													title="福气拱拱来（电影《熊出没•原始时代》片尾曲）"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">福气拱拱来（..</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="段奥娟,孟美岐,吴宣仪,赖美云"> <a
-														hidefocus="true"
-														href="http://music.taihe.com/artist/340444011">段奥娟</a><span
-														class="artist-line">/</span><a hidefocus="true"
-														href="http://music.taihe.com/artist/239566680">孟..</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;612047474&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;newIcon&quot;,&quot;albumId&quot;:&quot;612047472&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/a08ab761eaa1ff9399b3295863a0b9b9\/612054843\/612054843.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u798f\u6c14\u62f1\u62f1\u6765\uff08\u7535\u5f71\u300a\u718a\u51fa\u6ca1\u2022\u539f\u59cb\u65f6\u4ee3\u300b\u7247\u5c3e\u66f2\uff09&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top4"><div class="index">04</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/610722309" title="天份"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">天份</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="薛之谦"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/2517">薛之谦</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;610722309&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;newIcon&quot;,&quot;albumId&quot;:&quot;611662508&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/8d6d36c66ccb0dd8acf707e8fce234be\/611681814\/611681814.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u5929\u4efd&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top5"><div class="index">05</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/591310911" title="哑巴"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">哑巴</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="薛之谦"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/2517">薛之谦</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;591310911&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;newIcon&quot;,&quot;albumId&quot;:&quot;611662508&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/8d6d36c66ccb0dd8acf707e8fce234be\/611681814\/611681814.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u54d1\u5df4&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top6"><div class="index">06</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/611859361" title="某人"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">某人</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="周佑恒"> <a
-														hidefocus="true"
-														href="http://music.taihe.com/artist/340503616">周佑恒</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;611859361&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;newIcon&quot;,&quot;albumId&quot;:&quot;611859359&quot;,&quot;resourceTypeExt&quot;:&quot;2&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/b9f8015ba223450c59a5ced00a13b384\/611859468\/611859468.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u67d0\u4eba&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top7"><div class="index">07</div>
-									<div class="status status-up">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/611944036"
-													title="散场恋人（福利版）"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">散场恋人（福..</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="媛宝儿"> <a
-														hidefocus="true"
-														href="http://music.taihe.com/artist/340503618">媛宝儿</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;611944036&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;newIcon&quot;,&quot;albumId&quot;:&quot;611859584&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/7a8f1fa372bf111d20851bc34c771f57\/611944043\/611944043.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u6563\u573a\u604b\u4eba\uff08\u798f\u5229\u7248\uff09&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top8"><div class="index">08</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/601422013" title="最好"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">最好</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="薛之谦"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/2517">薛之谦</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;601422013&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;newIcon&quot;,&quot;albumId&quot;:&quot;611662508&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/8d6d36c66ccb0dd8acf707e8fce234be\/611681814\/611681814.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u6700\u597d&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top9"><div class="index">09</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/611717057" title="缘为冰"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">缘为冰</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="龙梅子"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1376">龙梅子</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;611717057&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;newIcon&quot;,&quot;albumId&quot;:&quot;611717054&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/3e6581f50cac570485718a4d7473fc13\/611718813\/611718813.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u7f18\u4e3a\u51b0&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top10"><div class="index">10</div>
-									<div class="status status-up">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/612041147"
-													title="一半人生（电影《飞驰人生》主题曲）"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">一半人生（电..</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="阿信"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1271">阿信</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;612041147&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;newIcon&quot;,&quot;albumId&quot;:&quot;612041145&quot;,&quot;resourceTypeExt&quot;:&quot;2&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/95f141e4b1071012ae87e2953d4ab1ee\/612045760\/612045760.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u4e00\u534a\u4eba\u751f\uff08\u7535\u5f71\u300a\u98de\u9a70\u4eba\u751f\u300b\u4e3b\u9898\u66f2\uff09&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
+									</li>
+								</c:forEach>
+								
 							</ul>
-							<span class="more"><a
-								href="http://music.taihe.com/top/new/?pst=shouyeTop"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;new_song&quot;,&quot;sub&quot;:&quot;all&quot;}">完整榜单&gt;&gt;</a></span>
 						</div>
 					</div>
-
-
-
 					<div class="mod mod-song-rank js-mod mod-hotsong"
 						monkey="NI_billboard_hot"
 						data-js-mod-name="new_index_billboard_hot">
@@ -1848,305 +907,34 @@ var indexPage = '1';
 						</div>
 						<div class="bd">
 							<ul class="song-list">
-
-								<li class=" top1"><div class="index">01</div>
-									<div class="status status-new">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/611238837" title="生僻字"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">生僻字</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="陈柯宇"> <a
-														hidefocus="true"
-														href="http://music.taihe.com/artist/209822512">陈柯宇</a>
-												</span>
-												</span>
+								<c:forEach items="${musciType[1] }" var="entity" varStatus="go">
+									
+									<li class=" top1"><div class="index">${go.count}</div>
+										<div class="status status-steady">
+											<i class="icon-status"></i>
+										</div>
+										<div class="song-info">
+											<div class="info">
+												<div class="song">
+													<a href="music/findByIdMusic?id=${entity.musicId }" title="${entity.musicName }">${entity.musicName }</a>
+													<span class="artist">
+														<span class="author_list" title="${entity.user_id }"> 
+														<a hidefocus="true" href="javascript:;">${entity.user_id }</a>
+													</span>
+													</span>
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;611238837&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;dayhotIcon&quot;,&quot;albumId&quot;:&quot;611238835&quot;,&quot;resourceTypeExt&quot;:&quot;2&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/2d5ab3120f08727becfc2803ee5402f7\/611740447\/611740447.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u751f\u50fb\u5b57&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top2"><div class="index">02</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/606149060" title="沙漠骆驼"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">沙漠骆驼</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="展展与罗罗"> <a
-														hidefocus="true"
-														href="http://music.taihe.com/artist/340462058">展展与罗罗</a>
-												</span>
-												</span>
-											</div>
+										<div class="opera-icon">
+											<a href="javascript:;"class="opera-icon-play icon icon-music-play js-play-song" ></a>
+											<a href="javascript:;" class="opera-icon-add icon icon-music-collect js-add"></a>
 										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;606149060&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;dayhotIcon&quot;,&quot;albumId&quot;:&quot;606149057&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/c9aa6f85bf036735c355a05dd373ff0b\/606149058\/606149058.png@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u6c99\u6f20\u9a86\u9a7c&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top3"><div class="index">03</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/601427388"
-													title="卡路里（电影《西虹市首富》插曲）"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">卡路里（电影..</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="火箭少女101"> <a
-														hidefocus="true"
-														href="http://music.taihe.com/artist/340442495">火箭少女101</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;601427388&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;dayhotIcon&quot;,&quot;albumId&quot;:&quot;601427384&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/8d356491f24692ff802cc49c80f51fee\/601427385\/601427385.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u5361\u8def\u91cc\uff08\u7535\u5f71\u300a\u897f\u8679\u5e02\u9996\u5bcc\u300b\u63d2\u66f2\uff09&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top4"><div class="index">04</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/604568155" title="往后余生"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">往后余生</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="马良,孙茜茹"> <a
-														hidefocus="true"
-														href="http://music.taihe.com/artist/340453493">马良</a><span
-														class="artist-line">/</span><a hidefocus="true"
-														href="http://music.taihe.com/artist/340453474">孙茜茹</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;604568155&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;dayhotIcon&quot;,&quot;albumId&quot;:&quot;604568152&quot;,&quot;resourceTypeExt&quot;:&quot;2&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/f53a667bbf3c11df1da0841fd34c4d9d\/604568153\/604568153.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u5f80\u540e\u4f59\u751f&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top5"><div class="index">05</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/598740690" title="只要平凡"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">只要平凡</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="张杰,张碧晨"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1035">张杰</a><span
-														class="artist-line">/</span><a hidefocus="true"
-														href="http://music.taihe.com/artist/163361619">张碧晨</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;598740690&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;dayhotIcon&quot;,&quot;albumId&quot;:&quot;598740686&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/2854c6d30aab478cec599a174c911eea\/598740687\/598740687.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u53ea\u8981\u5e73\u51e1&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top6"><div class="index">06</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/602870189"
-													title="我的爱（慕思《觉/醒》视频主题曲）"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">我的爱（慕思..</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="许巍"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1226">许巍</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;602870189&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;dayhotIcon&quot;,&quot;albumId&quot;:&quot;602870186&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/d3856609aa6068f9ae90002cc9cd321e\/602870187\/602870187.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u6211\u7684\u7231\uff08\u6155\u601d\u300a\u89c9\/\u9192\u300b\u89c6\u9891\u4e3b\u9898\u66f2\uff09&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top7"><div class="index">07</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/242078437" title="演员"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">演员</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="薛之谦"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/2517">薛之谦</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;242078437&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;dayhotIcon&quot;,&quot;albumId&quot;:&quot;241838068&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/49e6161afb13e3eda9d1cb4e304561a2\/584551506\/584551506.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u6f14\u5458&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top8"><div class="index">08</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/602980311"
-													title="至少还有你爱我"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">至少还有你爱我</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="龙梅子,王娜"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1376">龙梅子</a><span
-														class="artist-line">/</span><a hidefocus="true"
-														href="http://music.taihe.com/artist/340447097">王娜</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;602980311&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;dayhotIcon&quot;,&quot;albumId&quot;:&quot;602980305&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/015c6c99e1ced5261f624ef20cd7912f\/609142152\/609142152.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u81f3\u5c11\u8fd8\u6709\u4f60\u7231\u6211&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top9"><div class="index">09</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/121353608" title="半壶纱"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">半壶纱</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="刘珂矣"> <a
-														hidefocus="true"
-														href="http://music.taihe.com/artist/132632388">刘珂矣</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;121353608&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;dayhotIcon&quot;,&quot;albumId&quot;:&quot;121353611&quot;,&quot;resourceTypeExt&quot;:&quot;2&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/d52b5c8e1d37c9368df532d101d935a2\/611764634\/611764634.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u534a\u58f6\u7eb1&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top10"><div class="index">10</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/258475780"
-													title="你不来我不老 (对唱版)"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">你不来我不老..</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="高安,西单女孩"> <a
-														hidefocus="true"
-														href="http://music.taihe.com/artist/617453">高安</a><span
-														class="artist-line">/</span><a hidefocus="true"
-														href="http://music.taihe.com/artist/72167">西单..</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;258475780&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;dayhotIcon&quot;,&quot;albumId&quot;:&quot;258475887&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/bc104100f368e0add1076511afc5b23d\/579992784\/579992784.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u4f60\u4e0d\u6765\u6211\u4e0d\u8001 (\u5bf9\u5531\u7248)&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
+									</li>
+								</c:forEach>
+								
 							</ul>
-							<span class="more"><a
-								href="http://music.taihe.com/top/dayhot/?pst=shouyeTop"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;all&quot;}">完整榜单&gt;&gt;</a></span>
 						</div>
 					</div>
-
-
-
-
 					<div class="mod mod-song-rank js-mod mod-tranksong"
 						monkey="NI_billboard_trank"
 						data-js-mod-name="new_index_billboard_trank">
@@ -2158,1078 +946,149 @@ var indexPage = '1';
 						</div>
 						<div class="bd">
 							<ul class="song-list">
-								<li class=" top1"><div class="index">01</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/redrank/artist/612042200"
-													target="_blank" title="雯兮"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">雯兮</a><span
-													class="artist"><span class="author_list">70.08万分</span></span>
+								<c:forEach items="${musciType[2] }" var="entity" varStatus="go">
+									
+									<li class=" top1"><div class="index">${go.count}</div>
+										<div class="status status-steady">
+											<i class="icon-status"></i>
+										</div>
+										<div class="song-info">
+											<div class="info">
+												<div class="song">
+													<a href="music/findByIdMusic?id=${entity.musicId }" title="${entity.musicName }">${entity.musicName }</a>
+													<span class="artist">
+														<span class="author_list" title="${entity.user_id }"> 
+														<a hidefocus="true" href="javascript:;">${entity.user_id }</a>
+													</span>
+													</span>
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="opera-icon">
-										<span class="money"><a target="_blank"
-											href="http://music.taihe.com/redrank/artist/612042200"
-											"_blank"title=""
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;rank&quot;}">打榜</a></span>
-									</div></li>
-								<li class=" top2"><div class="index">02</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/redrank/artist/557648310"
-													target="_blank" title="阿暖"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">阿暖</a><span
-													class="artist"><span class="author_list">19.42万分</span></span>
-											</div>
+										<div class="opera-icon">
+											<a href="javascript:;"class="opera-icon-play icon icon-music-play js-play-song" ></a>
+											<a href="javascript:;" class="opera-icon-add icon icon-music-collect js-add"></a>
 										</div>
-									</div>
-									<div class="opera-icon">
-										<span class="money"><a target="_blank"
-											href="http://music.taihe.com/redrank/artist/557648310"
-											"_blank"title=""
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;rank&quot;}">打榜</a></span>
-									</div></li>
-								<li class=" top3"><div class="index">03</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/redrank/artist/602061713"
-													target="_blank" title="唐君子"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">唐君子</a><span
-													class="artist"><span class="author_list">2.60万分</span></span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon">
-										<span class="money"><a target="_blank"
-											href="http://music.taihe.com/redrank/artist/602061713"
-											"_blank"title=""
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;rank&quot;}">打榜</a></span>
-									</div></li>
-								<li class=" top4"><div class="index">04</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/redrank/artist/28788020"
-													target="_blank" title="风小筝"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">风小筝</a><span
-													class="artist"><span class="author_list">1,913分</span></span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon">
-										<span class="money"><a target="_blank"
-											href="http://music.taihe.com/redrank/artist/28788020"
-											"_blank"title=""
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;rank&quot;}">打榜</a></span>
-									</div></li>
-								<li class=" top5"><div class="index">05</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/redrank/artist/26320173"
-													target="_blank" title="聂坤"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">聂坤</a><span
-													class="artist"><span class="author_list">1,055分</span></span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon">
-										<span class="money"><a target="_blank"
-											href="http://music.taihe.com/redrank/artist/26320173"
-											"_blank"title=""
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;rank&quot;}">打榜</a></span>
-									</div></li>
-								<li class=" top6"><div class="index">06</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/redrank/artist/594759510"
-													target="_blank" title="刘大洋Leo"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">刘大洋Leo</a><span
-													class="artist"><span class="author_list">420分</span></span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon">
-										<span class="money"><a target="_blank"
-											href="http://music.taihe.com/redrank/artist/594759510"
-											"_blank"title=""
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;rank&quot;}">打榜</a></span>
-									</div></li>
-								<li class=" top7"><div class="index">07</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/redrank/artist/612042380"
-													target="_blank" title="陈一帆"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">陈一帆</a><span
-													class="artist"><span class="author_list">226分</span></span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon">
-										<span class="money"><a target="_blank"
-											href="http://music.taihe.com/redrank/artist/612042380"
-											"_blank"title=""
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;rank&quot;}">打榜</a></span>
-									</div></li>
-								<li class=" top8"><div class="index">08</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/redrank/artist/556038044"
-													target="_blank" title="张晶晶"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">张晶晶</a><span
-													class="artist"><span class="author_list">211分</span></span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon">
-										<span class="money"><a target="_blank"
-											href="http://music.taihe.com/redrank/artist/556038044"
-											"_blank"title=""
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;rank&quot;}">打榜</a></span>
-									</div></li>
-								<li class=" top9"><div class="index">09</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/redrank/artist/64742351"
-													target="_blank" title="小浩"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">小浩</a><span
-													class="artist"><span class="author_list">201分</span></span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon">
-										<span class="money"><a target="_blank"
-											href="http://music.taihe.com/redrank/artist/64742351"
-											"_blank"title=""
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;rank&quot;}">打榜</a></span>
-									</div></li>
-								<li class=" top10"><div class="index">10</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/redrank/artist/611744372"
-													target="_blank" title="金依佩"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">金依佩</a><span
-													class="artist"><span class="author_list">3分</span></span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon">
-										<span class="money"><a target="_blank"
-											href="http://music.taihe.com/redrank/artist/611744372"
-											"_blank"title=""
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;rank&quot;}">打榜</a></span>
-									</div></li>
+									</li>
+								</c:forEach>
 							</ul>
-							<span class="more"><a
-								href="http://music.taihe.com/redrank" target="_blank"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;all&quot;}">完整榜单&gt;&gt;</a></span>
 						</div>
 					</div>
-
-
-
-
-
-
-					<div class="mod mod-song-rank js-mod mod-oldsong"
-						monkey="NI_billboard_old"
-						data-js-mod-name="new_index_billboard_old">
+					
+					<div class="mod mod-song-rank js-mod mod-newsong"
+						monkey="NI_billboard_new"
+						data-js-mod-name="new_index_billboard_new">
 						<div class="hd">
-							<h2 class="title">经典老歌榜</h2>
+							<h2 class="title">新歌榜</h2>
 							<span
-								data-args="{&quot;id&quot;:[&quot;790142&quot;,&quot;931434&quot;,&quot;312707&quot;,&quot;704195&quot;,&quot;312870&quot;,&quot;233822&quot;,&quot;963292&quot;,&quot;276766&quot;,&quot;285075&quot;,&quot;15122721&quot;,&quot;280628&quot;,&quot;228209&quot;,&quot;844678&quot;,&quot;254891&quot;,&quot;254515&quot;,&quot;2128150&quot;,&quot;5919772&quot;,&quot;263068&quot;,&quot;1522960&quot;,&quot;205924&quot;],&quot;moduleName&quot;:&quot;oldsong&quot;}"><a
-								href="javascript:;" class="icon-play-all play-all js-play-song"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;play_all&quot;}"></a></span>
+								data-args="{&quot;id&quot;:[&quot;611238837&quot;,&quot;611801466&quot;,&quot;612047474&quot;,&quot;610722309&quot;,&quot;591310911&quot;,&quot;611859361&quot;,&quot;611944036&quot;,&quot;601422013&quot;,&quot;611717057&quot;,&quot;612041147&quot;,&quot;611954477&quot;,&quot;611902376&quot;,&quot;568320992&quot;,&quot;611744658&quot;,&quot;591579114&quot;,&quot;612017551&quot;,&quot;611636195&quot;,&quot;611952924&quot;,&quot;612040163&quot;,&quot;612064774&quot;],&quot;moduleName&quot;:&quot;new&quot;}"><a
+								href="javascript:;" class="icon-play-all play-all js-play-song" ></a></span>
 						</div>
 						<div class="bd">
 							<ul class="song-list">
-
-								<li class=" top1"><div class="index">01</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/790142" title="后来"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">后来</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="刘若英"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1067">刘若英</a>
-												</span>
-												</span>
+								<c:forEach items="${musciType[0] }" var="entity" varStatus="go">
+									
+									<li class=" top1"><div class="index">${go.count}</div>
+										<div class="status status-steady">
+											<i class="icon-status"></i>
+										</div>
+										<div class="song-info">
+											<div class="info">
+												<div class="song">
+													<a href="music/findByIdMusic?id=${entity.musicId }" title="${entity.musicName }">${entity.musicName }</a>
+													<span class="artist">
+														<span class="author_list" title="${entity.user_id }"> 
+														<a hidefocus="true" href="javascript:;">${entity.user_id }</a>
+													</span>
+													</span>
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;790142&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;oldsongIcon&quot;,&quot;albumId&quot;:&quot;190892&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/51677db1f7b51f1f1bacd1a2498665ff\/190892\/190892.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u540e\u6765&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top2"><div class="index">02</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/931434" title="风雨无阻"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">风雨无阻</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="周华健"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1097">周华健</a>
-												</span>
-												</span>
-											</div>
+										<div class="opera-icon">
+											<a href="javascript:;"class="opera-icon-play icon icon-music-play js-play-song" ></a>
+											<a href="javascript:;" class="opera-icon-add icon icon-music-collect js-add"></a>
 										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;931434&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;oldsongIcon&quot;,&quot;albumId&quot;:&quot;194037&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/c9291324603915130fd366e4e94cc237\/194037\/194037.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u98ce\u96e8\u65e0\u963b&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top3"><div class="index">03</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/312707" title="当爱已成往事"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">当爱已成往事</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="张国荣"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1092">张国荣</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;312707&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;oldsongIcon&quot;,&quot;albumId&quot;:&quot;64742&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/2037fc888a8f4d84c6fcb62c9536cebd\/583717040\/583717040.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u5f53\u7231\u5df2\u6210\u5f80\u4e8b&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top4"><div class="index">04</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/704195" title="伤心太平洋"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">伤心太平洋</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="任贤齐"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1094">任贤齐</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;704195&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;oldsongIcon&quot;,&quot;albumId&quot;:&quot;173971&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/73a3804e1b971cbebc63d99260278136\/173971\/173971.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u4f24\u5fc3\u592a\u5e73\u6d0b&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top5"><div class="index">05</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/312870" title="当爱已成往事"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">当爱已成往事</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="林忆莲,李宗盛"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1133">林忆莲</a><span
-														class="artist-line">/</span><a hidefocus="true"
-														href="http://music.taihe.com/artist/1925">李..</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;312870&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;oldsongIcon&quot;,&quot;albumId&quot;:&quot;66087&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/90392fb17371a44e39097fd00846ef97\/66087\/66087.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u5f53\u7231\u5df2\u6210\u5f80\u4e8b&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top6"><div class="index">06</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/233822" title="勇气"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">勇气</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="梁静茹"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1095">梁静茹</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;233822&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;oldsongIcon&quot;,&quot;albumId&quot;:&quot;68387&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/c8011e2241efd6b7ccca028269f7fdc3\/68387\/68387.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u52c7\u6c14&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top7"><div class="index">07</div>
-									<div class="status status-up">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/963292" title="恋恋风尘"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">恋恋风尘</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="老狼"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1314">老狼</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;963292&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;oldsongIcon&quot;,&quot;albumId&quot;:&quot;73078&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/c42c1234d927d81d0d2b85cd567e8e29\/612055560\/612055560.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u604b\u604b\u98ce\u5c18&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top8"><div class="index">08</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/276766" title="灰姑娘"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">灰姑娘</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="郑钧"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1378">郑钧</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;276766&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;oldsongIcon&quot;,&quot;albumId&quot;:&quot;70313&quot;,&quot;resourceTypeExt&quot;:&quot;2&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/ea5c9b6e9024b2bbee9cb392e3011523\/557288577\/557288577.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u7070\u59d1\u5a18&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top9"><div class="index">09</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/285075"
-													title="你怎么舍得我难过"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">你怎么舍得我..</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="黄品源"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1231">黄品源</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;285075&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;oldsongIcon&quot;,&quot;albumId&quot;:&quot;67975&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/dea4205c8b4663da41a45f1e9b707e83\/67975\/67975.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u4f60\u600e\u4e48\u820d\u5f97\u6211\u96be\u8fc7&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top10"><div class="index">10</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/15122721" title="小芳"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">小芳</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="李春波"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1358">李春波</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;15122721&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;oldsongIcon&quot;,&quot;albumId&quot;:&quot;23250608&quot;,&quot;resourceTypeExt&quot;:&quot;2&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/28662d8a7ac07b3f51796e334015ed1f\/601796173\/601796173.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u5c0f\u82b3&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
+									</li>
+								</c:forEach>
+								
 							</ul>
-							<span class="more"><a
-								href="http://music.taihe.com/top/oldsong/?pst=shouyeTop"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;old_song&quot;,&quot;sub&quot;:&quot;all&quot;}">完整榜单&gt;&gt;</a></span>
 						</div>
 					</div>
-
-
-
-
-
-					<div class="mod mod-song-rank js-mod mod-netsong"
-						monkey="NI_billboard_net"
-						data-js-mod-name="new_index_billboard_net">
+					<div class="mod mod-song-rank js-mod mod-hotsong"
+						monkey="NI_billboard_hot"
+						data-js-mod-name="new_index_billboard_hot">
 						<div class="hd">
-							<h2 class="title">网络歌曲榜</h2>
+							<h2 class="title">热歌榜</h2>
 							<span
-								data-args="{&quot;id&quot;:[&quot;602980311&quot;,&quot;611717057&quot;,&quot;601914158&quot;,&quot;604383128&quot;,&quot;601951725&quot;,&quot;603018938&quot;,&quot;569695775&quot;,&quot;607812710&quot;,&quot;602118320&quot;,&quot;554926752&quot;,&quot;606618151&quot;,&quot;607977307&quot;,&quot;605576366&quot;,&quot;607766118&quot;,&quot;258475780&quot;,&quot;265046969&quot;,&quot;601038901&quot;,&quot;598157526&quot;,&quot;589806702&quot;,&quot;572932398&quot;],&quot;moduleName&quot;:&quot;netsong&quot;}"><a
+								data-args="{&quot;id&quot;:[&quot;611238837&quot;,&quot;606149060&quot;,&quot;601427388&quot;,&quot;604568155&quot;,&quot;598740690&quot;,&quot;602870189&quot;,&quot;242078437&quot;,&quot;602980311&quot;,&quot;121353608&quot;,&quot;258475780&quot;,&quot;265046969&quot;],&quot;moduleName&quot;:&quot;dayhot&quot;}"><a
 								href="javascript:;" class="icon-play-all play-all js-play-song"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;play_all&quot;}"></a></span>
+								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;hot_song&quot;,&quot;sub&quot;:&quot;play_all&quot;}"></a></span>
 						</div>
 						<div class="bd">
 							<ul class="song-list">
-
-								<li class=" top1"><div class="index">01</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/602980311"
-													title="至少还有你爱我"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">至少还有你爱我</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="龙梅子,王娜"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1376">龙梅子</a><span
-														class="artist-line">/</span><a hidefocus="true"
-														href="http://music.taihe.com/artist/340447097">王娜</a>
-												</span>
-												</span>
+								<c:forEach items="${musciType[1] }" var="entity" varStatus="go">
+									
+									<li class=" top1"><div class="index">${go.count}</div>
+										<div class="status status-steady">
+											<i class="icon-status"></i>
+										</div>
+										<div class="song-info">
+											<div class="info">
+												<div class="song">
+													<a href="music/findByIdMusic?id=${entity.musicId }" title="${entity.musicName }">${entity.musicName }</a>
+													<span class="artist">
+														<span class="author_list" title="${entity.user_id }"> 
+														<a hidefocus="true" href="javascript:;">${entity.user_id }</a>
+													</span>
+													</span>
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;602980311&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;netsongIcon&quot;,&quot;albumId&quot;:&quot;602980305&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/015c6c99e1ced5261f624ef20cd7912f\/609142152\/609142152.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u81f3\u5c11\u8fd8\u6709\u4f60\u7231\u6211&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top2"><div class="index">02</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/611717057" title="缘为冰"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">缘为冰</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="龙梅子"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1376">龙梅子</a>
-												</span>
-												</span>
-											</div>
+										<div class="opera-icon">
+											<a href="javascript:;"class="opera-icon-play icon icon-music-play js-play-song" ></a>
+											<a href="javascript:;" class="opera-icon-add icon icon-music-collect js-add"></a>
 										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;611717057&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;netsongIcon&quot;,&quot;albumId&quot;:&quot;611717054&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/3e6581f50cac570485718a4d7473fc13\/611718813\/611718813.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u7f18\u4e3a\u51b0&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top3"><div class="index">03</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/601914158" title="都说"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">都说</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="龙梅子,老猫"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1376">龙梅子</a><span
-														class="artist-line">/</span><a hidefocus="true"
-														href="http://music.taihe.com/artist/1799">老猫</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;601914158&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;netsongIcon&quot;,&quot;albumId&quot;:&quot;601914154&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/e3feb8c1acbc7680dab69f244413bc49\/601914155\/601914155.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u90fd\u8bf4&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top4"><div class="index">04</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/604383128"
-													title="唱一首情歌"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">唱一首情歌</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="龙梅子,冷漠"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1376">龙梅子</a><span
-														class="artist-line">/</span><a hidefocus="true"
-														href="http://music.taihe.com/artist/1629">冷漠</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;604383128&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;netsongIcon&quot;,&quot;albumId&quot;:&quot;604383123&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/0201315b2edd9a7ab54b2244d801ba46\/604383124\/604383124.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u5531\u4e00\u9996\u60c5\u6b4c&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top5"><div class="index">05</div>
-									<div class="status status-up">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/601951725" title="武夷来思"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">武夷来思</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="降央卓玛"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1638">降央卓玛</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;601951725&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;netsongIcon&quot;,&quot;albumId&quot;:&quot;601951722&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/aaea3d95fe8bedd448a595da713c1fa4\/602005104\/602005104.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u6b66\u5937\u6765\u601d&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top6"><div class="index">06</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/603018938" title="瓜很甜"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">瓜很甜</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="后弦"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1273">后弦</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;603018938&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;netsongIcon&quot;,&quot;albumId&quot;:&quot;603018935&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/5870d31a1c76ef92194f312cc87501d1\/603018936\/603018936.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u74dc\u5f88\u751c&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top7"><div class="index">07</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/569695775"
-													title="一起红火火"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">一起红火火</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="凤凰传奇"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1490">凤凰传奇</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;569695775&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;netsongIcon&quot;,&quot;albumId&quot;:&quot;569695773&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/665dd133391c52622e9a7a2e05decd95\/569695441\/569695441.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u4e00\u8d77\u7ea2\u706b\u706b&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top8"><div class="index">08</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/607812710"
-													title="只羡鸳鸯不羡仙（电影同名主题曲）"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">只羡鸳鸯不羡..</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="安琥"> <a
-														hidefocus="true" href="http://music.taihe.com/artist/1397">安琥</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;607812710&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;netsongIcon&quot;,&quot;albumId&quot;:&quot;607812707&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/b86583b23e88ac7b25da17341f57c9b0\/607819963\/607819963.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u53ea\u7fa1\u9e33\u9e2f\u4e0d\u7fa1\u4ed9\uff08\u7535\u5f71\u540c\u540d\u4e3b\u9898\u66f2\uff09&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top9"><div class="index">09</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/602118320" title="求带走"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">求带走</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="谢容儿"> <a
-														hidefocus="true"
-														href="http://music.taihe.com/artist/322501">谢容儿</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;602118320&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;netsongIcon&quot;,&quot;albumId&quot;:&quot;602118316&quot;,&quot;resourceTypeExt&quot;:&quot;0&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/73ff0213d56b98e50f8ce891365fc750\/602118317\/602118317.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u6c42\u5e26\u8d70&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top10"><div class="index">10</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a href="http://music.taihe.com/song/554926752" title="红颜旧"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">红颜旧</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}">
-													<span class="author_list" title="崔子格"> <a
-														hidefocus="true"
-														href="http://music.taihe.com/artist/1224778">崔子格</a>
-												</span>
-												</span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:&quot;554926752&quot;,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;netsongIcon&quot;,&quot;albumId&quot;:&quot;554926749&quot;,&quot;resourceTypeExt&quot;:&quot;2&quot;,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/qukufile2.qianqian.com\/data2\/pic\/96323321dfdc24e7b0df35a7daa66cdc\/554924383\/554924383.jpg@s_1,w_90,h_90&quot;,&quot;songTitle&quot;:&quot;\u7ea2\u989c\u65e7&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
+									</li>
+								</c:forEach>
+								
 							</ul>
-							<span class="more"><a
-								href="http://music.taihe.com/top/netsong/?pst=shouyeTop"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;net_song&quot;,&quot;sub&quot;:&quot;all&quot;}">完整榜单&gt;&gt;</a></span>
 						</div>
 					</div>
-
-
-
-
-					<div class="mod mod-song-rank js-mod mod-originsong"
-						monkey="NI_billboard_origin"
-						data-js-mod-name="new_index_billboard_origin">
+					<div class="mod mod-song-rank js-mod mod-tranksong"
+						monkey="NI_billboard_trank"
+						data-js-mod-name="new_index_billboard_trank">
 						<div class="hd">
-							<h2 class="title">原创榜</h2>
-							<span
-								data-args="{&quot;id&quot;:[74189487,73830133,74112702,74203835,74177290,73840292,74200100,73984539,73837091,74253061],&quot;moduleName&quot;:&quot;musician&quot;}"><a
-								href="javascript:;" class="icon-play-all play-all js-play-song"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;play_all&quot;}"></a></span>
+							<h2 class="title">千千音乐U榜</h2>
+							<a href="http://music.taihe.com/redrank" class="icon-check-all"
+								target="_blank"
+								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;trank_song&quot;,&quot;sub&quot;:&quot;more&quot;}"></a>
 						</div>
 						<div class="bd">
 							<ul class="song-list">
-
-								<li class=" top1"><div class="index">01</div>
-									<div class="status status-up">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a
-													href="http://music.taihe.com/song/74189487/?pst=shouyeTop"
-													title="半生无求--卿本佳人小说原创同人作品"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">半生无求--卿..</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}"><span
-													class="author_list"><a target="_blank" title="琴酒蜀黍"
-														href="http://y.taihe.com/artist/115439/?pst=shouyeTop">琴酒蜀黍</a></span></span>
+								<c:forEach items="${musciType[2] }" var="entity" varStatus="go">
+									
+									<li class=" top1"><div class="index">${go.count}</div>
+										<div class="status status-steady">
+											<i class="icon-status"></i>
+										</div>
+										<div class="song-info">
+											<div class="info">
+												<div class="song">
+													<a href="music/findByIdMusic?id=${entity.musicId }" title="${entity.musicName }">${entity.musicName }</a>
+													<span class="artist">
+														<span class="author_list" title="${entity.user_id }"> 
+														<a hidefocus="true" href="javascript:;">${entity.user_id }</a>
+													</span>
+													</span>
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:74189487,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;musicianIcon&quot;,&quot;albumId&quot;:null,&quot;resourceTypeExt&quot;:null,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/ugc.cdn.qianqian.com\/yinyueren\/pic\/4654143a5ea2f457ce2f608e969b752e.jpg&quot;,&quot;songTitle&quot;:&quot;\u534a\u751f\u65e0\u6c42--\u537f\u672c\u4f73\u4eba\u5c0f\u8bf4\u539f\u521b\u540c\u4eba\u4f5c\u54c1&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top2"><div class="index">02</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a
-													href="http://music.taihe.com/song/73830133/?pst=shouyeTop"
-													title="三体Opening Theme"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">三体Opening
-													..</a><span class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}"><span
-													class="author_list"><a target="_blank"
-														title="野萨满王利夫"
-														href="http://y.taihe.com/artist/100105/?pst=shouyeTop">野萨满王..</a></span></span>
-											</div>
+										<div class="opera-icon">
+											<a href="javascript:;"class="opera-icon-play icon icon-music-play js-play-song" ></a>
+											<a href="javascript:;" class="opera-icon-add icon icon-music-collect js-add"></a>
 										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:73830133,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;musicianIcon&quot;,&quot;albumId&quot;:null,&quot;resourceTypeExt&quot;:null,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/ugc.cdn.qianqian.com\/yinyueren\/pic\/c11c9a679088e7d6598ac7aea37abb3b.jpg&quot;,&quot;songTitle&quot;:&quot;\u4e09\u4f53Opening Theme&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top3"><div class="index">03</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a
-													href="http://music.taihe.com/song/74112702/?pst=shouyeTop"
-													title="小提琴与钢琴--摇篮曲（新版）"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">小提琴与钢琴..</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}"><span
-													class="author_list"><a target="_blank" title="老友潸然"
-														href="http://y.taihe.com/artist/146196/?pst=shouyeTop">老友潸然</a></span></span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:74112702,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;musicianIcon&quot;,&quot;albumId&quot;:null,&quot;resourceTypeExt&quot;:null,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/ugc.cdn.qianqian.com\/yinyueren\/pic\/f85b4b7a6e5914ca02d126ecf7e04fed.jpg&quot;,&quot;songTitle&quot;:&quot;\u5c0f\u63d0\u7434\u4e0e\u94a2\u7434--\u6447\u7bee\u66f2\uff08\u65b0\u7248\uff09&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top4"><div class="index">04</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a
-													href="http://music.taihe.com/song/74203835/?pst=shouyeTop"
-													title="自然交响曲-阿吉太组合"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">自然交响曲-..</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}"><span
-													class="author_list"><a target="_blank" title="阿吉太组合"
-														href="http://y.taihe.com/artist/169387/?pst=shouyeTop">阿吉太组合</a></span></span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:74203835,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;musicianIcon&quot;,&quot;albumId&quot;:null,&quot;resourceTypeExt&quot;:null,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/ugc.cdn.qianqian.com\/yinyueren\/pic\/bc5ad34d9a8375b21cde.jpg&quot;,&quot;songTitle&quot;:&quot;\u81ea\u7136\u4ea4\u54cd\u66f2-\u963f\u5409\u592a\u7ec4\u5408&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top5"><div class="index">05</div>
-									<div class="status status-up">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a
-													href="http://music.taihe.com/song/74177290/?pst=shouyeTop"
-													title="游子吟"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">游子吟</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}"><span
-													class="author_list"><a target="_blank" title="婷婷唱古文"
-														href="http://y.taihe.com/artist/161963/?pst=shouyeTop">婷婷唱古文</a></span></span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:74177290,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;musicianIcon&quot;,&quot;albumId&quot;:null,&quot;resourceTypeExt&quot;:null,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/ugc.cdn.qianqian.com\/yinyueren\/pic\/e7935d20c1a6b5083ce0.jpg&quot;,&quot;songTitle&quot;:&quot;\u6e38\u5b50\u541f&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top6"><div class="index">06</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a
-													href="http://music.taihe.com/song/73840292/?pst=shouyeTop"
-													title="新点男女 feat.Celie"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">新点男女
-													feat..</a><span class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}"><span
-													class="author_list"><a target="_blank" title="满舒克"
-														href="http://y.taihe.com/artist/102987/?pst=shouyeTop">满舒克</a></span></span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:73840292,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;musicianIcon&quot;,&quot;albumId&quot;:null,&quot;resourceTypeExt&quot;:null,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/ugc.cdn.qianqian.com\/yinyueren\/pic\/864146473cbbcf460b74.jpg&quot;,&quot;songTitle&quot;:&quot;\u65b0\u70b9\u7537\u5973 feat.Celie&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top7"><div class="index">07</div>
-									<div class="status status-steady">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a
-													href="http://music.taihe.com/song/74200100/?pst=shouyeTop"
-													title="古琴韻"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">古琴韻</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}"><span
-													class="author_list"><a target="_blank" title="老街乐队"
-														href="http://y.taihe.com/artist/100675/?pst=shouyeTop">老街乐队</a></span></span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:74200100,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;musicianIcon&quot;,&quot;albumId&quot;:null,&quot;resourceTypeExt&quot;:null,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/ugc.cdn.qianqian.com\/yinyueren\/pic\/f53bbf730e27869a28e6e175c4aa02d8.jpg&quot;,&quot;songTitle&quot;:&quot;\u53e4\u7434\u97fb&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top8"><div class="index">08</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a
-													href="http://music.taihe.com/song/73984539/?pst=shouyeTop"
-													title="给清晨的微笑"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">给清晨的微笑</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}"><span
-													class="author_list"><a target="_blank" title="水钢琴惟一"
-														href="http://y.taihe.com/artist/102894/?pst=shouyeTop">水钢琴惟一</a></span></span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:73984539,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;musicianIcon&quot;,&quot;albumId&quot;:null,&quot;resourceTypeExt&quot;:null,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/ugc.cdn.qianqian.com\/yinyueren\/pic\/2b85456f1c49ad3c93b99816c4c059ce.jpg&quot;,&quot;songTitle&quot;:&quot;\u7ed9\u6e05\u6668\u7684\u5fae\u7b11&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top9"><div class="index">09</div>
-									<div class="status status-new">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a
-													href="http://music.taihe.com/song/73837091/?pst=shouyeTop"
-													title="映山竹海（钢琴）"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">映山竹海（钢..</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}"><span
-													class="author_list"><a target="_blank" title="空雨"
-														href="http://y.taihe.com/artist/102087/?pst=shouyeTop">空雨</a></span></span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:73837091,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;musicianIcon&quot;,&quot;albumId&quot;:null,&quot;resourceTypeExt&quot;:null,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/ugc.cdn.qianqian.com\/yinyueren\/pic\/a2c1eacb701efb9e6427bee493da52db.jpg&quot;,&quot;songTitle&quot;:&quot;\u6620\u5c71\u7af9\u6d77\uff08\u94a2\u7434\uff09&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
-								<li class=" top10"><div class="index">10</div>
-									<div class="status status-down">
-										<i class="icon-status"></i>
-									</div>
-									<div class="song-info">
-										<div class="info">
-											<div class="song">
-												<a
-													href="http://music.taihe.com/song/74253061/?pst=shouyeTop"
-													title="知与君同"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;song_name&quot;}">知与君同</a><span
-													class="artist"
-													c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;artist_name&quot;}"><span
-													class="author_list"><a target="_blank" title="河图"
-														href="http://y.taihe.com/artist/134378/?pst=shouyeTop">河图</a></span></span>
-											</div>
-										</div>
-									</div>
-									<div class="opera-icon"
-										data-args="{&quot;id&quot;:74253061,&quot;type&quot;:&quot;song&quot;,&quot;moduleName&quot;:&quot;musicianIcon&quot;,&quot;albumId&quot;:null,&quot;resourceTypeExt&quot;:null,&quot;siPresaleFlag&quot;:null,&quot;mediaType&quot;:1,&quot;songPic&quot;:&quot;http:\/\/ugc.cdn.qianqian.com\/yinyueren\/pic\/9afc1b99d44b905a033b491166d7a76a.jpg&quot;,&quot;songTitle&quot;:&quot;\u77e5\u4e0e\u541b\u540c&quot;,&quot;songPublishTime&quot;:null}">
-										<a href="javascript:;"
-											class="opera-icon-play icon icon-music-play js-play-song"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;play&quot;}"></a><a
-											href="javascript:;"
-											class="opera-icon-add icon icon-music-collect js-add"
-											c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;add&quot;}"></a>
-									</div></li>
+									</li>
+								</c:forEach>
 							</ul>
-							<span class="more"><a
-								href="http://y.taihe.com/top/song/?pst=shouyeTop"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;origin_song&quot;,&quot;sub&quot;:&quot;all&quot;}">完整榜单&gt;&gt;</a></span>
 						</div>
 					</div>
 
@@ -3237,7 +1096,6 @@ var indexPage = '1';
 
 
 			</div>
-
 			<div class="sidebar ">
 
 
@@ -3269,128 +1127,9 @@ var indexPage = '1';
 					</div>
 					<div class="bd">
 						<ul class="clearfix tags-1220">
-							<li><a href="http://music.taihe.com/tag/%E6%83%85%E6%AD%8C"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u60c5\u6b4c&quot;}">情歌</a></li>
-							<li><a href="http://music.taihe.com/tag/%E7%BA%A2%E6%AD%8C"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u7ea2\u6b4c&quot;}">红歌</a></li>
-							<li><a href="http://music.taihe.com/tag/%E5%8A%B2%E7%88%86"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u52b2\u7206&quot;}">劲爆</a></li>
-							<li><a href="http://music.taihe.com/tag/%E5%A4%A9%E7%B1%81"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u5929\u7c41&quot;}">天籁</a></li>
-							<li><a
-								href="http://music.taihe.com/tag/%E7%BB%8F%E5%85%B8%E8%80%81%E6%AD%8C"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u7ecf\u5178\u8001\u6b4c&quot;}">经典老歌</a></li>
-							<li><a href="http://music.taihe.com/tag/%E6%AC%A7%E7%BE%8E"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u6b27\u7f8e&quot;}">欧美</a></li>
-							<li><a
-								href="http://music.taihe.com/tag/%E7%BD%91%E7%BB%9C%E6%AD%8C%E6%9B%B2"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u7f51\u7edc\u6b4c\u66f2&quot;}">网络歌曲</a></li>
-							<li><a href="http://music.taihe.com/tag/%E6%B0%91%E6%AD%8C"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u6c11\u6b4c&quot;}">民歌</a></li>
-							<li><a href="http://music.taihe.com/tag/80%E5%90%8E"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_80\u540e&quot;}">80后</a></li>
-							<li><a href="http://music.taihe.com/tag/%E5%84%BF%E6%AD%8C"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u513f\u6b4c&quot;}">儿歌</a></li>
-							<li><a href="http://music.taihe.com/tag/%E4%BC%A4%E6%84%9F"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u4f24\u611f&quot;}">伤感</a></li>
-							<li><a href="http://music.taihe.com/tag/%E5%AE%89%E9%9D%99"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u5b89\u9759&quot;}">安静</a></li>
-							<li><a href="http://music.taihe.com/tag/%E5%BD%B1%E8%A7%86"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u5f71\u89c6&quot;}">影视</a></li>
-							<li><a
-								href="http://music.taihe.com/tag/DJ%20%E8%88%9E%E6%9B%B2"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_DJ \u821e\u66f2&quot;}">DJ
-									舞曲</a></li>
-							<li><a href="http://music.taihe.com/tag/%E6%80%80%E6%97%A7"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u6000\u65e7&quot;}">怀旧</a></li>
-							<li><a
-								href="http://music.taihe.com/tag/%E5%8F%A4%E5%85%B8%E9%9F%B3%E4%B9%90"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u53e4\u5178\u97f3\u4e50&quot;}">古典音乐</a></li>
-							<li><a href="http://music.taihe.com/tag/%E6%BF%80%E6%83%85"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u6fc0\u60c5&quot;}">激情</a></li>
-							<li><a
-								href="http://lebo.taihe.com/tag/%E6%B2%BB%E6%84%88%E7%B3%BB?fr=Music_PC_Tag"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u6cbb\u6108&quot;}">治愈</a></li>
-							<li><a
-								href="http://music.taihe.com/tag/%E7%BA%AF%E9%9F%B3%E4%B9%90"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u7eaf\u97f3\u4e50&quot;}">纯音乐</a></li>
-							<li><a
-								href="http://music.taihe.com/tag/%E5%B9%BF%E5%9C%BA%E8%88%9E"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u5e7f\u573a\u821e&quot;}">广场舞</a></li>
-							<li><a
-								href="http://music.taihe.com/tag/%E4%B8%AD%E5%9B%BD%E5%A5%BD%E5%A3%B0%E9%9F%B3"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u4e2d\u56fd\u597d\u58f0\u97f3&quot;}">中国好声音</a></li>
-							<li><a href="http://music.taihe.com/tag/%E5%AF%B9%E5%94%B1"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u5bf9\u5531&quot;}">对唱</a></li>
-							<li><a href="http://music.taihe.com/tag/%E7%B2%A4%E8%AF%AD"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u7ca4\u8bed&quot;}">粤语</a></li>
-							<li><a href="http://music.taihe.com/tag/%E7%83%AD%E6%AD%8C"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u70ed\u6b4c&quot;}">热歌</a></li>
-							<li><a
-								href="http://music.taihe.com/tag/%E8%BD%BB%E9%9F%B3%E4%B9%90"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u8f7b\u97f3\u4e50&quot;}">轻音乐</a></li>
-							<li><a href="http://music.taihe.com/tag/%E7%94%B5%E5%BD%B1"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u7535\u5f71&quot;}">电影</a></li>
-							<li><a href="http://music.taihe.com/tag/90%E5%90%8E"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_90\u540e&quot;}">90后</a></li>
-							<li><a href="http://music.taihe.com/tag/%E6%B5%81%E8%A1%8C"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u6d41\u884c&quot;}">流行</a></li>
-							<li><a href="http://music.taihe.com/tag/%E6%91%87%E6%BB%9A"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u6447\u6eda&quot;}">摇滚</a></li>
-							<li><a
-								href="http://music.taihe.com/tag/%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u80cc\u666f\u97f3\u4e50&quot;}">背景音乐</a></li>
-							<li><a href="http://music.taihe.com/tag/%E7%94%9C%E8%9C%9C"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u751c\u871c&quot;}">甜蜜</a></li>
-							<li><a href="http://music.taihe.com/songlist/5768"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u6e38\u620f\u97f3\u4e50&quot;}">游戏音乐</a></li>
-							<li><a
-								href="http://music.taihe.com/tag/%E7%94%B5%E8%A7%86%E5%89%A7"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u7535\u89c6\u5267&quot;}">电视剧</a></li>
-							<li><a href="http://music.taihe.com/songlist/5782"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u53e4\u98ce&quot;}">古风</a></li>
-							<li><a href="http://music.taihe.com/tag/%E5%8F%A4%E5%85%B8"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u53e4\u5178&quot;}">古典</a></li>
-							<li><a
-								href="http://music.taihe.com/tag/%E4%B8%AD%E5%9B%BD%E9%A3%8E"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u4e2d\u56fd\u98ce&quot;}">中国风</a></li>
-							<li><a href="http://music.taihe.com/songlist/5832"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u4ed9\u4fa0&quot;}">仙侠</a></li>
-							<li><a
-								href="http://music.taihe.com/tag/70%E5%B9%B4%E4%BB%A3"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_70\u5e74\u4ee3&quot;}">70年代</a></li>
-							<li><a
-								href="http://lebo.taihe.com/album/2782364?fr=Music_PC_Tag"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u65b0\u6b4c&quot;}">新歌</a></li>
-							<li><a href="http://music.taihe.com/tag/%E7%B2%A4%E8%AF%AD"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u7ca4\u8bed&quot;}">粤语</a></li>
-							<li><a href="http://music.taihe.com/tag/%E8%BD%BB%E6%9F%94"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u8f7b\u67d4&quot;}">轻柔</a></li>
-							<li><a href="http://music.taihe.com/tag/%E7%A9%BA%E7%81%B5"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u7a7a\u7075&quot;}">空灵</a></li>
-							<li><a href="http://music.taihe.com/tag/%E6%88%8F%E6%9B%B2"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u620f\u66f2&quot;}">戏曲</a></li>
-							<li><a href="http://music.taihe.com/tag/%E5%86%9B%E6%97%85"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u519b\u65c5&quot;}">军旅</a></li>
-							<li><a href="http://music.taihe.com/tag/%E7%83%AD%E9%97%B9"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u70ed\u95f9&quot;}">热闹</a></li>
-							<li><a href="http://music.taihe.com/tag/%E8%83%8E%E6%95%99"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u80ce\u6559&quot;}">胎教</a></li>
-							<li><a
-								href="http://music.taihe.com/tag/%E6%88%91%E6%98%AF%E6%AD%8C%E6%89%8B"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u6211\u662f\u6b4c\u624b&quot;}">我是歌手</a></li>
-							<li><a
-								href="http://music.taihe.com/tag/%E8%90%A8%E5%85%8B%E6%96%AF"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u8428\u514b\u65af&quot;}">萨克斯</a></li>
-							<li><a href="http://music.taihe.com/tag/%E5%82%8D%E6%99%9A"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u508d\u665a&quot;}">傍晚</a></li>
-							<li><a href="http://music.taihe.com/tag/%E5%9B%BD%E8%AF%AD"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u56fd\u8bed&quot;}">国语</a></li>
-							<li><a href="http://music.taihe.com/tag/%E5%96%9C%E6%82%A6"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u559c\u60a6&quot;}">喜悦</a></li>
-							<li><a
-								href="http://music.taihe.com/tag/%E4%B8%AD%E5%9B%BD%E5%A5%BD%E5%A3%B0%E9%9F%B3"
-								c-tj="{&quot;page&quot;:&quot;index&quot;,&quot;pos&quot;:&quot;tag&quot;,&quot;sub&quot;:&quot;tag_\u4e2d\u56fd\u597d\u58f0\u97f3&quot;}">中国好声音</a></li>
+							<c:forEach items="${musciType[4] }" var="entity">
+								<li><a href="music/findByTypeMusic?id=${entity.mtId }" >${entity.mtName }</a></li>
+							</c:forEach>
 						</ul>
 						<ul class="clearfix tags-980">
 							<li><a href="http://music.taihe.com/tag/%E6%83%85%E6%AD%8C"

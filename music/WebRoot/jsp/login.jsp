@@ -88,13 +88,12 @@
 							class="spn">图片验证码</span>
 					</p>
 					<p class="tpass-form-item tpass-form-btn">
-						<input type="button" onclick="userSubmit()" value="登录 dsafd "
+						<input type="button" onclick="userSubmit()" value="登录 "
 							class="tpass-button tpass-button-submit" >
 					</p>
 					
 					<script type="text/javascript">
 						function userSubmit(){
-							
 							$.ajax({
 								url:'user/loginUser',
 								data:{'user_phone':$("#phone").val(),'user_pwd':$("#pwd").val()},
@@ -102,8 +101,7 @@
 								dataType:'json',
 								success:function(data){
 									if(data == 1){
-										
-										alert("登陆成功");
+										window.location.href="music/findAllMusicTypeNum";
 									}else{
 										alert("登录失败");
 									}

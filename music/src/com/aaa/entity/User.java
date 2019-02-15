@@ -17,7 +17,14 @@ public class User implements Serializable{
 	private Integer user_del_state;
 	private String user_phone;
 	private Integer user_type;
+	private String user_pic;
 	
+	public String getUser_pic() {
+		return user_pic;
+	}
+	public void setUser_pic(String user_pic) {
+		this.user_pic = user_pic;
+	}
 	public Integer getUser_type() {
 		return user_type;
 	}
@@ -89,7 +96,8 @@ public class User implements Serializable{
 				+ ", user_email=" + user_email + ", user_pwd=" + user_pwd
 				+ ", user_rgister_time=" + user_rgister_time
 				+ ", user_del_state=" + user_del_state + ", user_phone="
-				+ user_phone + ", user_type=" + user_type + "]";
+				+ user_phone + ", user_type=" + user_type + ", user_pic="
+				+ user_pic + "]";
 	}
 	public User(String user_name, String user_idcard, String user_city,
 			String user_email, String user_pwd, String user_rgister_time,
