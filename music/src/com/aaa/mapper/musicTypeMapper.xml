@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.aaa.dao.MusicTypeDao">
+ 	
+ 	<select id="findMT" resultType="Music_type">
+ 		select  * from music_type
+		<if test="param1 != null and param2 != null ">
+			limit #{param1},#{param2}
+		</if>
+ 	</select>
+ 	
+ 	<delete id="deleteMT">
+ 		delete from music_type where mtId in
+ 		<foreach collection="array" item="id" open="(" close=")" separator=",">
+ 			#{id}
+ 		</foreach>
+ 	</delete>
+ 	
+</mapper>

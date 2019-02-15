@@ -1,3 +1,3 @@
 eclipse.preferences.version=1
-validator.Checked=WebRoot/js
-validator.Unchecked=
+validator.Checked=WebRoot/backstage,WebRoot/backstage/common/layui/css/modules/layim/html/getmsg.json,WebRoot/backstage/common/layui/lay/dest/layui.all.js,WebRoot/backstage/common/layui/lay/modules/jquery.js,WebRoot/js,WebRoot/backstage/common/layui/layui.js,WebRoot/backstage/common/layui/lay/modules/mobile.js,WebRoot/backstage/common/layui/layui.all.js
+validator.Unchecked=WebRoot/backstage/common

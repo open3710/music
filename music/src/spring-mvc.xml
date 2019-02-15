@@ -23,5 +23,16 @@
 	<!-- 静态资源：1.修改前端控制器拦截的路径,加后缀,不拦截静态资源;2.静态资源映射;3.使用默认servlet -->
 	<!-- 静态资源映射 location：静态资源位置  mapping:静态资源的映射路径 -->
 	<mvc:resources location="/" mapping="/**"/>
+	<!-- 文件上传 -->
+	<!-- <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
+	 p:defaultEncoding="UTF-8" p:maxUploadSize="5400000" p:uploadTempDir="fileUpload/temp"/> -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 设定默认编码 -->
+		<property name="defaultEncoding" value="UTF-8"></property>
+		<!-- 设定文件上传的最大值5MB，5*1024*1024 -->
+		<property name="maxUploadSize" value="52428800"></property>
+	</bean>
+
 	
 </beans>

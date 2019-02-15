@@ -26,4 +26,30 @@ public class UserService {
 		List<User> list = ud.loginUser(user);
 		return list;
 	}
+	
+	public List<User> findUser(Integer userState,Integer page,Integer limit){
+		List<User> list = ud.findUser(userState, page,limit);
+		return list;
+	}
+
+	public List<User> selectUser(Integer page,Integer limit){
+		List<User> list = ud.selectUser(page, limit);
+		return list;
+	}
+	
+	public Integer addUser(User user){
+		Integer addUser = ud.addUser(user);
+		return addUser;
+	}
+	
+	public Integer updateUser(User user){
+		Integer column = ud.updateUser(user);
+		return column;
+	}
+	
+	public Integer deleteUser(Integer[] ids){
+		Integer column = ud.deleteUser(ids);
+		return column;
+	}
+	
 }

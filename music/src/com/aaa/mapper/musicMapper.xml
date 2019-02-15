@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.aaa.dao.MusicDao">
+ 	
+ 	<select id="findByTypeMusic" resultType="map">
+ 		select m.musicId,m.musicName,m.musicDate,(select mtName from music_type where mtid=m.mtId) mtName,m.musicNewUrl,
+		(select user_name from user where user_id=m.user_id) user_name,m.musicTitle,m.musicUrl,
+		m.musicClick,m.musicDelStat,m.musicPic from music m 
+		<where>
+			<if test="param1 != null and param1 != ''">
+				mtid=#{param1}
+			</if>
+			<if test="param4 != null and param4 != ''">
+				m.musicName like CONCAT('%',#{param4},'%')
+			</if>
+			<if test="param2 != null and param3 != ''">
+				limit #{param2},#{param3}
+			</if>
+		</where>
+ 	</select>
+ 	
+ 	
+ 	
+ 	<insert id="addMusic" parameterType="com.aaa.entity.Music" >
+ 		insert into music
+	  	<trim prefix="(" suffix=")" suffixOverrides=",">
+	  		<if test="musicName != null and musicName != '' ">
+	  			musicName,
+	  		</if>
+	  		<if test="musicDate != null and musicDate != '' ">
+	  			musicDate,
+	  		</if>
+	  		<if test="mtId != null and mtId != '' ">
+	  			mtId,
+	  		</if>
+	  		<if test="musicTitle != null and musicTitle != ''">
+	  			musicTitle,
+	  		</if>
+	  		<if test="musicUrl != null and musicUrl != '' ">
+	  			musicUrl,
+	  		</if>
+	  		<if test="musicClick != null and musicClick != '' ">
+	  			musicClick,
+	  		</if>
+	  		<if test="musicDelStat != null and musicDelStat != '' ">
+	  			musicDelStat,
+	  		</if>
+	  		<if test="musicPic != null and musicPic != '' ">
+	  			musicPic,
+	  		</if>
+	  		<if test="musicNewUrl != null and musicNewUrl != '' ">
+	  			musicNewUrl,
+	  		</if>
+	  		<if test="user_id != null and user_id != '' ">
+	  			user_id,
+	  		</if>
+	  	</trim>
+	  	<trim prefix="values(" suffix=")" suffixOverrides=",">
+	  		<if test="musicName != null and musicName != '' ">
+	  			#{musicName},
+	  		</if>
+	  		<if test="musicDate != null and musicDate != '' ">
+	  			#{musicDate},
+	  		</if>
+	  		<if test="mtId != null and mtId != '' ">
+	  			#{mtId},
+	  		</if>
+	  		<if test="musicTitle != null and musicTitle != ''">
+	  			#{musicTitle},
+	  		</if>
+	  		<if test="musicUrl != null and musicUrl != '' ">
+	  			#{musicUrl},
+	  		</if>
+	  		<if test="musicClick != null and musicClick != '' ">
+	  			#{musicClick},
+	  		</if>
+	  		<if test="musicDelStat != null and musicDelStat != ''">
+	  			#{musicDelStat},
+	  		</if>
+	  		<if test="musicPic != null and musicPic != '' ">
+	  			#{musicPic},
+	  		</if>
+	  		<if test="musicNewUrl != null and musicNewUrl != '' ">
+	  			#{musicNewUrl},
+	  		</if>
+	  		<if test="user_id != null and user_id != '' ">
+	  			#{user_id},
+	  		</if>
+	  	</trim>
+ 	</insert>
+ 	
+ 	<select id="findAllMusics" resultType="Map">
+ 		select m.musicId,m.musicName,m.musicDate,(select mtName from music_type where mtid=m.mtId) mtName,m.musicNewUrl,
+		(select user_name from user where user_id=m.user_id) user_name,m.musicTitle,m.musicUrl,
+		m.musicClick,m.musicDelStat,m.musicPic from music m
+		<if test="param1 != null and param2 != null">
+			limit #{param1},#{param2}
+		</if>
+ 	</select>
+ 	
+ 	<delete id="deleteMusic">
+ 		delete from music where musicId in
+ 		<foreach collection="array" open="(" close=")" item="ids" separator=",">
+ 			#{ids}
+ 		</foreach>
+ 	</delete>
+ 	
+</mapper>
